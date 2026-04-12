@@ -1,0 +1,8 @@
+@import url('../shared-base.css');
+.container { max-width: 600px; margin: 0 auto; padding: 0.875rem; }
+h1 { text-align: center; color: var(--text); font-size: 1.375rem; margin-bottom: 0.5rem; }
+.image-box img { width: 100%; border-radius: var(--radius-lg); margin: 0.875rem 0; box-shadow: var(--shadow-md); }
+.details { background: rgba(255,255,255,0.85); padding: 0.875rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); line-height: 1.6; font-size: 0.9375rem; }
+.coming { margin-top: 1.25rem; text-align: center; padding: 0.875rem; background: var(--green); color: #fff; border-radius: var(--radius-xl); font-weight: 700; box-shadow: var(--shadow-md); }
+@media (min-width: 481px) { h1 { font-size: 1.5rem; } }
+@media (min-width: 1025px) { .container { max-width: 700px; } }

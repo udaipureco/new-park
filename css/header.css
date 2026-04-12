@@ -1,0 +1,229 @@
+/* ================================================================
+   UWS Digital — Header & Menu Overlay Styles
+   Shared across ALL pages via import
+   ================================================================ */
+
+/* -- Prevent CLS while header loads -- */
+#headerContainer {
+  min-height: 56px;
+  background: var(--color-primary, #3f5f3f);
+}
+
+/* ======================== HEADER BAR ======================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-primary, #3f5f3f);
+  color: var(--color-cream, #efe6d6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.logo span {
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-menu-trigger {
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0.25rem;
+  background: none;
+  border: none;
+}
+
+.menu-icon {
+  width: 28px;
+  height: 28px;
+}
+
+
+/* ======================== MENU OVERLAY ======================== */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 9999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  max-width: 380px;
+  height: 100%;
+  background: var(--color-bg, #efe6d6);
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  padding: 1.25rem;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-overlay.active .menu-panel {
+  transform: translateX(0);
+}
+
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.menu-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.875rem;
+  padding: 0.5rem;
+  background: var(--color-bg, #efe6d6);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  object-fit: contain;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: var(--color-bg, #efe6d6);
+  color: var(--color-primary, #3f5f3f);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg) scale(1.05);
+  background: var(--color-primary, #3f5f3f);
+  color: var(--color-cream, #efe6d6);
+}
+
+.menu-list {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.875rem;
+  margin-bottom: 0.625rem;
+  border-radius: 0.875rem;
+  background: var(--color-bg, #efe6d6);
+  color: var(--color-primary, #3f5f3f);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-list li span {
+  font-size: 1.0625rem;
+}
+
+.menu-list li:hover,
+.menu-list li.menu-active {
+  transform: translateX(4px);
+  background: var(--color-primary, #3f5f3f);
+  color: var(--color-cream, #efe6d6);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.menu-list a:visited {
+  color: inherit;
+}
+
+
+/* ======================== DESKTOP OVERRIDES ======================== */
+@media (min-width: 481px) {
+  .header {
+    padding: 0.875rem 1.5rem;
+  }
+
+  .logo span {
+    font-size: 1rem;
+  }
+
+  #headerContainer {
+    min-height: 60px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    border-radius: 0 0 0.875rem 0.875rem;
+    padding: 0.875rem 2rem;
+    max-width: var(--container-max, 1200px);
+    margin: 0 auto;
+  }
+
+  .logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo span {
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+  }
+
+  .menu-panel {
+    width: 360px;
+  }
+
+  #headerContainer {
+    min-height: 64px;
+    max-width: var(--container-max, 1200px);
+    margin: 0 auto;
+  }
+}

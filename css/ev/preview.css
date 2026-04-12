@@ -1,0 +1,19 @@
+@import url('../shared-base.css');
+.container { padding-bottom: 5rem; }
+.header { background: #e5e5e5; color: var(--text); font-size: 1rem; }
+.card { background: var(--card-bg); animation: fadeIn 0.3s ease; }
+.center { text-align: center; }
+.title-card h2 { margin: 0; color: var(--green); }
+.sub { color: var(--text-light); font-size: 0.8125rem; }
+.info { background: #fff; padding: 0.75rem; border-radius: var(--radius-md); margin-top: 0.5rem; font-size: 0.875rem; }
+.highlight { font-weight: 700; text-align: center; background: #e8efe8; border-radius: var(--radius-sm); padding: 0.75rem; }
+.total { margin-top: 0.625rem; padding: 0.875rem; text-align: center; font-weight: 900; font-size: 1.125rem; background: linear-gradient(135deg, var(--green), var(--green-dark)); color: #fff; border-radius: var(--radius-xl); }
+.warning { font-size: 0.8125rem; color: #777; text-align: center; }
+.check { display: flex; align-items: center; justify-content: center; }
+.check-label { display: flex; align-items: center; gap: 0.625rem; font-size: 0.875rem; }
+.check input { width: 1.125rem; height: 1.125rem; }
+.btn-group { position: fixed; bottom: 0; left: 0; right: 0; max-width: 600px; margin: auto; box-shadow: 0 -4px 10px rgba(0,0,0,0.06); }
+.back-btn { background: #ccc; color: #333; }
+.pay-btn { background: var(--green); color: #fff; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 1025px) { .btn-group { left: 50%; right: auto; transform: translateX(-50%); } }
