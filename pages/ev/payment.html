@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5f2eea">
+<title>Payment</title>
+<link rel="stylesheet" href="../../css/ev/payment.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<div class="container">
+  <div class="card center">
+    <h2>UDAIPUR WILDLIFE SANCTUARY</h2>
+    <p class="sub">EV Cart Payment</p>
+  </div>
+  <div class="card center amount-card">
+    <h3>Amount to Pay</h3>
+    <div class="amount" id="amount">&#8377;0</div>
+  </div>
+  <div class="card center">
+    <h3>Scan & Pay</h3>
+    <img src="../../images/qr.png" class="qr">
+    <p class="small">Scan using PhonePe / GPay / Paytm</p>
+  </div>
+  <div class="card">
+    <h3>Booking Details</h3>
+    <div class="info" id="name"></div>
+    <div class="info" id="mobile"></div>
+  </div>
+  <div class="loading" id="loading">Processing Payment...</div>
+</div>
+
+<div class="btn-group">
+  <button onclick="goBack()">Back</button>
+  <button onclick="payNow()">Pay Now</button>
+</div>
+
+<script src="/js/header-loader.js"></script>
+<script src="../../js/ev/payment.js"></script>
+</body>
+</html>

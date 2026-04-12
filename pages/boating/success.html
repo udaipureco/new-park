@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#3f5f3f">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Success</title>
+<link rel="stylesheet" href="../../css/boating/success.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<div class="container">
+  <div class="success-box">
+    <h2>Booking Successful</h2>
+    <p>Your ticket has been generated</p>
+  </div>
+  <div class="ticket" id="ticket">
+    <div class="ticket-header">UDAIPUR WILDLIFE SANCTUARY</div>
+    <div class="ticket-sub">Boating Entry Ticket</div>
+    <div class="row"><span>Date</span><span id="date"></span></div>
+    <div class="row"><span>Booking ID</span><span id="bookingId"></span></div>
+    <hr>
+    <div id="details"></div>
+    <div class="total" id="total"></div>
+    <hr>
+    <div class="row"><span>Name</span><span id="name"></span></div>
+    <div class="row"><span>Mobile</span><span id="mobile"></span></div>
+  </div>
+  <div class="btn-group">
+    <button onclick="goHome()">Home</button>
+    <button onclick="downloadPDF()">Download</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="/js/header-loader.js"></script>
+<script src="../../js/boating/success.js"></script>
+</body>
+</html>

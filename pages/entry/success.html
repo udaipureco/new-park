@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Success</title>
+<meta name="theme-color" content="#3f5f3f">
+<link rel="stylesheet" href="../../css/entry/success.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<div class="container">
+  <h2 class="success-title">Booking Successful</h2>
+  <p class="subtitle">Your ticket has been generated</p>
+
+  <div class="ticket" id="ticket">
+    <div class="title-row">
+      <img src="/images/logo.png" class="logo-small">
+      <h2>UDAIPUR WILDLIFE SANCTUARY</h2>
+    </div>
+    <p class="ticket-type">ENTRY TICKET</p>
+    <hr>
+    <p><b>Booking ID:</b> <span id="bookingId"></span></p>
+    <hr>
+    <p id="name"></p>
+    <p id="mobile"></p>
+    <p id="gmail"></p>
+    <hr>
+    <p id="adult"></p>
+    <p id="child"></p>
+    <p class="total" id="total"></p>
+    <hr>
+    <p id="date"></p>
+    <p>Time: 9 AM - 5 PM</p>
+    <hr>
+    <svg id="barcode"></svg>
+    <hr>
+    <div class="rules">
+      <p>Non-refundable</p>
+      <p>Valid for selected date only</p>
+    </div>
+    <hr>
+    <p class="footer">Issued by UWS Authority</p>
+  </div>
+
+  <div class="btn-group">
+    <button onclick="goHome()">Back to Home</button>
+    <button onclick="downloadPDF()">Download Ticket</button>
+  </div>
+</div>
+
+<script src="/js/header-loader.js"></script>
+<script src="../../js/entry/success.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</body>
+</html>
