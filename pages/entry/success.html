@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3f5f3f">
+<title>Booking Confirmed — Udaipur Wildlife Sanctuary</title>
+<link rel="stylesheet" href="../../css/header.css">
+<link rel="stylesheet" href="../../css/common-ui.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<div class="success-header">
+  <div class="check-icon">&#10003;</div>
+  <h1>Booking Confirmed!</h1>
+  <p>Your ticket has been generated</p>
+</div>
+
+<div class="ticket" id="ticket">
+  <div class="ticket-header">
+    <h2>&#127807; UDAIPUR WILDLIFE SANCTUARY</h2>
+    <p>Entry Ticket</p>
+  </div>
+  <div class="ticket-body">
+    <div class="ticket-id" id="bookingId">UWS-XXXXXX</div>
+
+    <div class="section-label">Visit Date</div>
+    <div class="ticket-info-row"><span id="dateText">--</span></div>
+
+    <div class="section-label">Entry Tickets</div>
+    <div id="entryDetails"></div>
+
+    <div class="section-label">Visitor</div>
+    <div class="ticket-info-row"><span>Name</span><strong id="nameText">--</strong></div>
+    <div class="ticket-info-row"><span>Mobile</span><strong id="mobileText">--</strong></div>
+    <div class="ticket-info-row"><span>Gmail</span><strong id="gmailText">--</strong></div>
+
+    <div class="total-row">
+      <span>TOTAL PAID</span>
+      <span id="totalText">&#8377;0</span>
+    </div>
+  </div>
+  <div class="ticket-footer">
+    <p>Non-refundable &nbsp;|&nbsp; Valid for selected date only</p>
+    <p>Issued by UWS Authority</p>
+  </div>
+</div>
+
+<div class="success-btns">
+  <button class="btn-home-success" onclick="goHome()">Back to Home</button>
+  <button class="btn-pdf" onclick="downloadPDF()">Download PDF</button>
+</div>
+
+<script src="/js/uws-state.js"></script>
+<script src="/js/header-loader.js"></script>
+<script src="../../js/entry/success.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
