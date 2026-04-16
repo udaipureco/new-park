@@ -1,0 +1,139 @@
+/* ================================================================
+   UWS Digital — Shared Base (Sub-pages)
+   Common reset, variables, typography for all sub-pages
+   ================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import url('header.css');
+
+:root {
+  /* === Canonical Brand Colors (matches main.css) === */
+  --color-primary:    #3f5f3f;
+  --color-dark:       #2e4a2e;
+  --color-bg:         #efe6d6;
+  --color-card:       #f3f1eb;
+  --color-text:       #2e4a2e;
+  --color-text-light: #666666;
+  --color-accent:     #b07a2a;
+  --color-cream:      #efe6d6;
+
+  /* === Backward-compatible aliases (existing sub-pages keep working) === */
+  --green:      var(--color-primary);
+  --green-dark: var(--color-dark);
+  --bg:         var(--color-bg);
+  --card-bg:    var(--color-card);
+  --card-white: #ffffff;
+  --text:       var(--color-text);
+  --text-light: var(--color-text-light);
+
+  /* Typography */
+  --font-body:    'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  --font-display: 'DM Serif Display', serif;
+
+  /* Radius */
+  --radius-sm:   0.5rem;
+  --radius-md:   0.875rem;
+  --radius-lg:   1.125rem;
+  --radius-xl:   1.25rem;
+  --radius-pill: 50rem;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 16px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+
+  /* Transitions */
+  --transition: 0.25s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--font-body); border: none; outline: none; }
+
+/* Shared container for form pages */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+/* Shared card */
+.card {
+  background: var(--color-card);
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 0.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* Shared button group (sticky bottom) */
+.btn-group {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: 0.625rem;
+  padding: 0.625rem 1rem;
+  background: var(--color-bg);
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.btn-group button {
+  flex: 1;
+  padding: 0.875rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-dark));
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-group button:active {
+  transform: scale(0.97);
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+  .container { max-width: 560px; padding: 1rem 1.25rem; }
+  .card { padding: 1.125rem; }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  body { display: flex; flex-direction: column; align-items: center; }
+  .container { max-width: 650px; }
+  .btn-group { max-width: 650px; }
+}

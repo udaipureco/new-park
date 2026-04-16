@@ -1,0 +1,13 @@
+@import url('../shared-base.css');
+.title { text-align: center; margin-top: 0.875rem; color: var(--text); font-size: 1.5rem; font-weight: 900; }
+.image-box { padding: 0.625rem 0.875rem; max-width: 600px; margin: 0 auto; }
+.image-box img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.details { margin: 0.875rem; padding: 0.875rem; background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); max-width: 600px; margin-left: auto; margin-right: auto; }
+.type-box { display: flex; justify-content: space-between; background: #f3f3f3; padding: 0.75rem 0.875rem; border-radius: var(--radius-sm); margin-bottom: 0.625rem; font-weight: 600; box-shadow: var(--shadow-sm); font-size: 0.9375rem; }
+.details p { margin-top: 0.625rem; line-height: 1.6; font-size: 0.9375rem; }
+.rules { margin: 0.875rem; padding: 0.875rem; background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); max-width: 600px; margin-left: auto; margin-right: auto; }
+.rules h3 { color: var(--green); font-weight: 800; }
+.rules li { margin-bottom: 0.375rem; font-size: 0.9375rem; }
+.coming { margin: 1.25rem auto; padding: 0.875rem; text-align: center; background: var(--green); color: #fff; border-radius: var(--radius-xl); font-weight: 900; max-width: 600px; }
+@media (min-width: 481px) { .title { font-size: 1.625rem; } }
+@media (min-width: 1025px) { .details, .rules { max-width: 700px; } .image-box { max-width: 700px; } }

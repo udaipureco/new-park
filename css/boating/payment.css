@@ -1,0 +1,14 @@
+@import url('../shared-base.css');
+:root { --primary: #5f259f; --secondary: #1a73e8; }
+body { background: #f4f6fb; }
+.title { text-align: center; font-weight: 900; font-size: 1.5rem; color: var(--primary); }
+.subtitle { text-align: center; color: var(--text-light); margin-bottom: 0.875rem; }
+.card { background: #fff; padding: 1.25rem; border-radius: var(--radius-xl); margin-bottom: 0.875rem; box-shadow: var(--shadow-md); }
+.center { text-align: center; }
+#amount { font-size: 2rem; font-weight: 900; color: var(--primary); }
+.card h3 { color: #000; font-weight: 800; }
+.qr { width: 180px; margin: 0.875rem auto; display: block; border-radius: var(--radius-md); background: #eee; }
+.small { font-size: 0.8125rem; color: var(--text-light); }
+.btn-group button:first-child { background: #e0e0e0; color: #333; }
+.btn-group button:last-child { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; }
+.loading { display: none; text-align: center; margin-top: 0.875rem; font-weight: 700; color: var(--primary); }

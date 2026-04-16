@@ -1,0 +1,9 @@
+@import url('../shared-base.css');
+.title { text-align: center; color: var(--green); font-weight: 900; font-size: 1.375rem; }
+.subtitle { text-align: center; color: var(--text-light); margin-bottom: 0.875rem; }
+.card.small { font-size: 0.8125rem; color: var(--text-light); }
+#ticketBox div { background: #fff; padding: 0.75rem; border-radius: var(--radius-md); margin-bottom: 0.5rem; display: flex; justify-content: space-between; box-shadow: var(--shadow-sm); }
+.total { margin-top: 0.625rem; padding: 0.75rem; text-align: center; font-size: 1.25rem; font-weight: 900; background: #ddd; border-radius: var(--radius-xl); }
+.info { background: #fff; padding: 0.75rem; border-radius: var(--radius-md); margin-bottom: 0.5rem; }
+.btn-group button:first-child { background: #ccc; color: #333; }
+.btn-group button:last-child { background: var(--green); color: #fff; }
