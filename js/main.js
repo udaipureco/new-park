@@ -629,3 +629,11 @@ function scrollToLocation(){
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 }
+
+
+function goToBirdPage() {
+  document.body.style.opacity = "0";
+  setTimeout(() => {
+    window.location.href = "pages/bird/bird.html";
+  }, 200);
+}
