@@ -639,5 +639,5 @@ function goToBirdPage() {
 }
 
 function goWildlife() {
-  window.location.href = "/pages/Wildlife/Wildlife.html";
+  window.location.href = "/pages/wildlife/wildlife.html";
 }
