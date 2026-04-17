@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- MOBILE TOP BAR COLOR -->
+<meta name="theme-color" content="#3f5f3f">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Explore Udaipur Bird Sanctuary with rare birds, best bird watching times, rules, and a cinematic photo gallery." />
     <title>Udaipur Bird Sanctuary</title>
@@ -10,10 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../css/bird/bird.css">
-  </head>
-  <body>
-  
-    <div class="forest-bg" aria-hidden="true"></div>
+</head>
+<body>
+
+  <!-- ✅ ADD THIS LINE EXACTLY HERE -->
+  <div id="headerContainer"></div>
+
+  <div class="forest-bg" aria-hidden="true"></div>
 
     <main class="bird-page">
       <section class="hero reveal" aria-label="Udaipur Bird Sanctuary hero">
@@ -133,12 +139,16 @@
         </div>
       </section>
 
-      <div class="back-wrap reveal">
-        <button class="back-button" type="button" id="back-home">← Back to Home</button>
-      </div>
+<div class="back-wrap">
+  <a href="/index.html" class="back-button">
+    <span class="arrow">←</span>
+    <span>Back to Home</span>
+  </a>
+</div>
     </main>
 
-
+<link rel="stylesheet" href="/css/header.css">
+<script src="/js/header-loader.js"></script>
 <script src="../../js/bird/bird.js" defer></script>
   </body>
 </html>
