@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function loadHeader() {
-  const headerContainer = document.getElementById("header-container");
+  const headerContainer = document.getElementById("headerContainer");
 
   if (!headerContainer) {
     return;
