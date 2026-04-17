@@ -2354,6 +2354,16 @@ ul {
   opacity: 1;
 }
 
+.bird-overlay {
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.bird-card img {
+  pointer-events: none;
+}
+
 /* ================= DESKTOP BIRD DESIGN ================= */
 
 @media (min-width: 768px) {
