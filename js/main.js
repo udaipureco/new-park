@@ -641,3 +641,10 @@ function goToBirdPage() {
 function goWildlife() {
   window.location.href = "/pages/wildlife/wildlife.html";
 }
+
+
+function goToPage() {
+  window.location.href = "pages/interpretation/interpretation.html";
+}function navigateToPage(url){
+  window.location.href = url;
+}
