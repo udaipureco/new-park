@@ -120,6 +120,24 @@
 </div>
 <!-- POPUP END -->
 
+<!-- ================= NOTICE MODAL (NEW) ================= -->
+<div class="notice-modal" id="noticeModal">
+  <div class="notice-box">
+
+    <div class="notice-header">
+      🚨 Notice
+    </div>
+
+    <div class="notice-content" id="noticeContent"></div>
+
+    <div class="notice-footer">
+      <button id="noticeCloseBtn">Continue</button>
+    </div>
+
+  </div>
+</div>
+
+
 <!-- ================= BOATING ================= -->
 
 <section class="boating-box scroll-reveal" id="boating" data-testid="boating-section">
@@ -326,17 +344,26 @@
 <section class="services services-bg scroll-reveal-stagger" id="attractions" data-testid="attractions-section">
 
 <div class="card scroll-animate" data-testid="attraction-card-1">
-<img src="images/attractions/interpre.jpg" alt="Interpretation Centre">
+<img src="images/interpretation/img1.webp" alt="Interpretation Centre">
 <h3>Interpretation Centre</h3>
 
-<div class="explore-btn">
-<svg viewBox="0 0 180 44">
-<rect x="1" y="1" width="178" height="42" rx="12" fill="#3f5f3f"/>
-<text x="80" y="27" text-anchor="middle" font-size="18" font-weight="700" fill="#efe6d6">
-Explore Now
-</text>
-<polygon points="148,17 160,22 148,27" fill="#efe6d6"/>
-</svg>
+<div class="explore-btn" onclick="navigateToPage('pages/interpretation/interpretation.html')">
+  <svg viewBox="0 0 180 44">
+    
+    <!-- Background -->
+    <rect x="1" y="1" width="178" height="42" rx="22" class="btn-bg"/>
+    
+    <!-- Text -->
+    <text x="90" y="27" text-anchor="middle"
+          font-size="16" font-weight="700"
+          class="btn-text">
+      Explore Now
+    </text>
+
+    <!-- Arrow -->
+    <polygon points="150,17 162,22 150,27" class="btn-arrow"/>
+    
+  </svg>
 </div>
 
 </div>
@@ -430,7 +457,7 @@ Explore Now
   <div class="bird-card">
 
     <!-- Background Image -->
-    <img src="images/bird/bird.jpg" alt="Bird Sanctuary">
+    <img src="images/bird/bird1.webp" alt="Bird Sanctuary">
 
     <!-- Overlay Content -->
     <div class="bird-overlay">
