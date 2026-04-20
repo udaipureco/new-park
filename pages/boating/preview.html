@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3f5f3f">
+<title>Preview Booking — Udaipur Wildlife Sanctuary</title>
+<link rel="stylesheet" href="../../css/header.css">
+<link rel="stylesheet" href="../../css/common-ui.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<div class="page-header centered">
+  <h1>BOOKING PREVIEW</h1>
+  <p>Udaipur Wildlife Sanctuary</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Visit Date</h3>
+    <p id="dateText" style="font-size:0.875rem;font-weight:700;color:#333;"></p>
+  </div>
+
+  <div class="card">
+    <h3>Boating</h3>
+    <div id="boatingDetails"><p class="no-items">None selected</p></div>
+  </div>
+
+  <div class="card">
+    <h3>Visitor Details</h3>
+    <p class="visitor-row" id="nameText"></p>
+    <p class="visitor-row" id="mobileText"></p>
+    <p class="visitor-row" id="gmailText"></p>
+  </div>
+
+  <div class="total-bar" id="totalBar">TOTAL: &#8377;0</div>
+
+  <div class="card">
+    <div class="terms-row">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree to the Terms &amp; Conditions. This ticket is non-refundable and valid only for the selected date.</label>
+    </div>
+  </div>
+
+</div>
+
+<div class="sticky-footer">
+  <button class="btn-back" onclick="goBack()">&#9664; BACK</button>
+  <button class="btn-pay" onclick="confirmBooking()">PAY NOW &#9654;</button>
+</div>
+
+<script src="/js/header-loader.js"></script>
+<script src="../../js/boating/preview.js"></script>
+</body>
+</html>
